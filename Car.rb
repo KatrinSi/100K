@@ -10,5 +10,6 @@ class Car
             puts "Your maximum speed reached, drive slower."
         end
     end 
-# Koha is a dick
+
+    
 end

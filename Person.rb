@@ -15,6 +15,15 @@ class Person
         
     end
 
+    def donate (donation_money_integer)
+        if self.money >= donation_money_integer
+            puts "You donated successfully!"
+            self.money = self.money - donation_money_integer
+        else 
+            puts "You are a luser coz you don't have money at all."
+        end
+    end
+
 end
 
 # car 1
@@ -51,3 +60,9 @@ person1.country = "Azerbajan"
 
 person1.buy_car(car1)
 person1.buy_car(car2)
+
+person1.donate(100)
+
+# if person has enough money
+# display "You donated successfully!"
+# substract donated money from wallet 
