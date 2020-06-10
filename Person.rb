@@ -21,7 +21,18 @@ class Person
             self.money = self.money - donation_money_integer
         else 
             puts "You are a luser coz you don't have money at all."
-        end
+        end     
+    end
+
+    def beg ()
+        money = [1, 2, 5, 10, 20, 100]
+        # rand function returns a random index for the array not number
+        index = rand (money.length)
+        # index = 2
+
+        puts "Somebody donated to you #{money [index]}"
+        self.money = self.money + money [index]
+        
     end
 
 end
@@ -63,6 +74,13 @@ person1.buy_car(car2)
 
 person1.donate(100)
 
+person2 = Person.new
+person2.first_name = "Homeless"
+person2.money = 0
+person2.beg()
+puts person2.money
+
 # if person has enough money
 # display "You donated successfully!"
 # substract donated money from wallet 
+
